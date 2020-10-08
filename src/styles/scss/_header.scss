@@ -1,0 +1,25 @@
+.header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f8f9;
+}
+
+.header__title {
+  font-family: "Architects Daughter";
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: #302ecd;
+}
+
+.header__icon {
+  width: 25px;
+  margin-right: 5px;
+  height: auto;
+  fill: #302ecd;
+}
