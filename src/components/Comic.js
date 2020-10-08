@@ -9,10 +9,11 @@ export const Comic = ({ comic, onClickNext }) => {
           src={nextIcon}
           className="comic__next-icon"
           onClick={onClickNext}
+          alt="Next button"
         />
       </div>
 
-      <img src={comic.img} className="comic__image" />
+      <img src={comic.img} className="comic__image" alt={comic.alt} />
       <p>{comic.year}</p>
     </div>
   );

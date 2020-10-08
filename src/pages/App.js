@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Transition } from "react-transition-group";
 import { Comic } from "../components/Comic";
 import { Raiting } from "../components/Raiting";
 import { Header } from "../components/Header";
@@ -28,25 +27,23 @@ const App = () => {
     <>
       <Header />
       <div className="container">
-        <Transition>
-          {isLoading ? (
-            <Loading />
-          ) : (
-            <>
-              <Comic
-                comic={comic}
-                onClickNext={() => {
-                  getRandomComic();
-                }}
-              />
-              <Raiting
-                onClick={() => {
-                  getRandomComic();
-                }}
-              />
-            </>
-          )}
-        </Transition>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <Comic
+              comic={comic}
+              onClickNext={() => {
+                getRandomComic();
+              }}
+            />
+            <Raiting
+              onClick={() => {
+                getRandomComic();
+              }}
+            />
+          </>
+        )}
       </div>
     </>
   );
